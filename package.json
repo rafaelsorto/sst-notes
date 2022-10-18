@@ -1,0 +1,24 @@
+{
+  "name": "sst-notes",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "AWS_PROFILE=sst sst start --stage dev",
+    "build": "AWS_PROFILE=sst sst build",
+    "deploy": "AWS_PROFILE=sst sst deploy",
+    "remove": "AWS_PROFILE=sst sst remove",
+    "console": "AWS_PROFILE=sst sst console",
+    "test": "AWS_PROFILE=sst sst load-config -- vitest run"
+  },
+  "devDependencies": {
+    "aws-cdk-lib": "2.39.1",
+    "@serverless-stack/cli": "^1.15.16",
+    "@serverless-stack/resources": "^1.15.16",
+    "typescript": "^4.8.4",
+    "@tsconfig/node16": "^1.0.3",
+    "vitest": "^0.24.3"
+  },
+  "workspaces": [
+    "services"
+  ]
+}
